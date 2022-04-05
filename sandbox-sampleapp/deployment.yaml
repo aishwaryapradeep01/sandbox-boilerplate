@@ -1,0 +1,36 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: sample-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-deployment
+  template:
+    metadata:
+      labels:
+        app: sample-deployment
+    spec:
+      containers:
+        - name: sample-deployment
+          image: IMAGE_NAME
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3100
+      restartPolicy: Always
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: sample-deployment
+spec:
+  type: NodePort
+  ports:
+    - port: 3100
+      targetPort: 3100
+      protocol: TCP
+      nodePort: 31000
+  selector:
+    app: sample-deployment
+  
