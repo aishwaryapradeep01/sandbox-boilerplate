@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Button, TextInput, Form, Loading, ToastNotification } from 'carbon-components-react';
+import { Button, TextInput, Form, Loading, ToastNotification, Select, SelectItem } from 'carbon-components-react';
 
 function Component2() {
 
     const [isLoading, setisLoading] = useState(false);
     const [inputOne, setinputOne] = useState('');
-    const [inputTwo, setinputTwo] = useState('');
     const [notifyStatus, setnotifyStatus] = useState(false);
     const [notify, setnotify] = useState({
         title: "",
@@ -28,6 +27,21 @@ function Component2() {
             setisLoading(false);
         }
     }
+    const dropdowndata = [
+        {
+            id: 'a',
+            value: 'Option A',
+        },
+        {
+            id: 'b',
+            value: 'Option B',
+        },
+        {
+            id: 'c',
+            value: 'Option C',
+        },
+    ];
+    var [selectsetOne, setselectOne] = useState(dropdowndata[0].id);
 
     return (
         <>
@@ -38,8 +52,13 @@ function Component2() {
                 <div className="TextArea" >
                     <TextInput type="text" id={'inputOne'} labelText={'Input*'} helperText="Input value details" placeholder={'Input Field Placeholder'} size='lg' value={inputOne} onChange={(e) => setinputOne(e.target.value)} />
                 </div>
-                <div className="TextArea" >
-                    <TextInput type="text" id={'inputTwo'} labelText={'Input'} helperText="Input value details" placeholder={'Input Field Placeholder'} size='lg' value={inputTwo} onChange={(e) => setinputTwo(e.target.value)} />
+
+                <div className="SelectArea" >
+                    <Select labelText="Sample Select" id={'selectsetOne'} size="lg" value={selectsetOne} onChange={(e) => { setselectOne(e.target.value) }}>
+                        {dropdowndata.map((item, i) => (
+                            <SelectItem value={item.id} key={i} text={item.value} />
+                        ))}
+                    </Select>
                 </div>
 
                 <div className="ButtonArea">

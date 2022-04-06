@@ -1,3 +1,7 @@
+// This is an Express based backend
+// 'Multer' is used for the file upload functionality
+// Uploaded files get stored in this location: 'datafolder/uploadedfiles/' as "data.csv"
+
 var express = require('express');
 var multer = require('multer')
 var portfinder = require("portfinder");

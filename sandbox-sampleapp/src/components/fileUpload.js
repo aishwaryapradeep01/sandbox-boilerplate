@@ -12,8 +12,12 @@ function uid(prefix = 'id') {
 function Fileupload() {
 
     const [files, setFiles] = useState([]);
-    const [notifystatus, setnotifystatus] = useState(false);
-    const [err1status, seterr1status] = useState(false);
+    const [notifyStatus, setnotifyStatus] = useState(false);
+    const [notify, setnotify] = useState({
+        title: "",
+        type: "",
+        message: ""
+    })
 
     let valid = true;
 
@@ -161,12 +165,15 @@ function Fileupload() {
                             status: "complete",
                             iconDescription: "Upload complete",
                         };
-                        setnotifystatus(true);
                         //console.log("file uploaded"); 
+                        setnotifyStatus(true);
+                        setnotify({ title: "Success Notification", type: 'success', message: "File Upload Successful" })
                     }
                     else {
                         //console.log("file not uploaded");
-                        seterr1status(true);
+                        setnotifyStatus(true);
+                        setnotify({ title: "Error Notification", type: 'error', message: "File Upload Failed" })
+
                     }
 
                 }
@@ -178,14 +185,16 @@ function Fileupload() {
                         invalid: true,
                     };
                     //console.log("Issue with uploaded file");
-                    seterr1status(true);
+                    setnotifyStatus(true);
+                    setnotify({ title: "Error Notification", type: 'error', message: "File Upload Failed" })
                 }
 
             }
         }
         else {
             //console.log("Issue with uploaded file");
-            seterr1status(true);
+            setnotifyStatus(true);
+            setnotify({ title: "Error Notification", type: 'error', message: "File Upload Failed" })
         }
     };
 
@@ -194,13 +203,6 @@ function Fileupload() {
             setFiles(files.filter(({ uuid }) => clickedUuid !== uuid)),
         [files]
     );
-
-    function notifystatusf() {
-        setnotifystatus(false);
-    }
-    function err1closef() {
-        seterr1status(false);
-    }
 
     return (
 
@@ -237,28 +239,18 @@ function Fileupload() {
                         />))}
             </div>
 
-            {notifystatus &&
-                <ToastNotification
-                    iconDescription="Close notification"
-                    subtitle={<span>File Upload Successful</span>}
-                    timeout={3000}
-                    onClose={notifystatusf}
-                    kind='success'
-                    title="Success Notification"
-                />
-            }
-            {err1status &&
-                <ToastNotification
-                    iconDescription="Close notification"
-                    subtitle={<span>File upload failed</span>}
-                    timeout={3000}
-                    onClose={err1closef}
-                    title="Error Notification"
-                />
-            }
 
-            <br />
-            <br />
+            {notifyStatus ?
+                <ToastNotification
+                    iconDescription="Close notification"
+                    kind={notify.type}
+                    subtitle={<span>{notify.message}</span>}
+                    timeout={3000}
+                    onClose={() => setnotifyStatus(false)}
+                    title={notify.title}
+                />
+                : null}
+
         </div>
 
     );
