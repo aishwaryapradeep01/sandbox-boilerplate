@@ -37,6 +37,11 @@ Provide a description for the asset specifying its purpose, features and usecase
 * Add an architecture image for you asset (if any)
 * Summarize the execution flow of your asset
 
+# Pre-requisites
+
+* Mention any pre-requisite steps required run the asset. For example, steps to obtain API credentials, steps to sign up for IBM Cloud services
+
+
 # Instructions
 
 * Mention step-by-step instructions to execute your asset
