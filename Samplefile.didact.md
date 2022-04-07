@@ -126,7 +126,7 @@
                 <p>Launch the application in the preview window.</p>
             </div>
             <input type="checkbox"><a id="step" class="button is-dark is-medium" title="Launch the Application"
-                href="didact://?commandId=vscode.didact.sendNamedTerminalAString&text=sample$$cd%20sandbox-boilerplate/sandbox-sampleapp%20%26%26%20npm%20run%20server"
+                href="didact://?commandId=vscode.didact.sendNamedTerminalAString&text=sample$$npm%20run%20server"
                 target="_blank"><span>Launch Application</span></a>
             <span class="dot"><svg fill="white" id="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                     viewBox="0 0 32 32">
@@ -160,7 +160,7 @@
              <div class="footer-step re-launch-application" style="background:transparent">
                 <p class="afterbutton ">Re-launch the application to view the changes made.</p>
                 <a class="button is-dark is-medium" title="Re-Launch the Application"
-                    href="didact://?commandId=vscode.didact.sendNamedTerminalAString&text=sample$$cd%20sandbox-boilerplate/sandbox-sampleapp%20%26%26%20rm%20-rf%20build%20%26%26%20npm%20run%20build%20%26%26%20npm%20run%20server">Re-Launch
+                    href="didact://?commandId=vscode.didact.sendNamedTerminalAString&text=sample$$rm%20-rf%20build%20%26%26%20npm%20run%20build%20%26%26%20npm%20run%20server">Re-Launch
                     Application</a>
             </div>
             </div>
