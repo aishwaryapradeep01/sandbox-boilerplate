@@ -4,7 +4,7 @@ Sandbox Asset Repository Template|
 --|
 [![Use the sandbox boilerplate template](https://user-images.githubusercontent.com/52746337/160120439-ab1e6eb7-f4ba-4f57-bb0c-9f048cd5fe83.png)](https://github.com/aishwaryapradeep01/sandbox-boilerplate/generate)
 
-Alternatively,
+The sandbox sample application is based on ReactJS, NodeJS and Carbon UI. It provides usable components such as File upload, drop down, text fields etc to help build applications faster
 
 ## Steps to run the sample app locally
 1) Clone the repository
@@ -30,6 +30,9 @@ Alternatively,
 2) Open the file in your local Visual Studio Code IDE 
 3) Right-click the file in the panel to start the didact
 > Note: Every didact file should follow this convention: `your-filename.didact.md`
+
+![](didact-config/didact.gif)
+
 
 ## Steps to deploy the application to IKS
 1) Install [Docker](https://docs.docker.com/get-docker/) or [Podman](https://podman.io/getting-started/installation)
