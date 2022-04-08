@@ -52,6 +52,5 @@
         * Select the subscription for Data Quality for AI to proceed.
         * You can obtain your Client ID/Secret from here. Else, you can "Generate API Key".
 
-* IBM Cloud account - Do not have an IBM Cloud account? [Click here](https://cloud.ibm.com/registration) to create one for free. 
-
-* IBM Cloud Pak for Data account - [Login](https://dataplatform.cloud.ibm.com/home2?context=cpdaas?cm_sp=ibmdev--developer-sandbox--cloudreg) or [Create](https://dataplatform.cloud.ibm.com/registration/stepone?context=cpdaas&apps=all?cm_sp=ibmdev--developer-sandbox--cloudreg) one for free.
+    * IBM Cloud account - Do not have an IBM Cloud account? [Click here](https://cloud.ibm.com/registration) to create one for free. 
+    * IBM Cloud Pak for Data account - [Login](https://dataplatform.cloud.ibm.com/home2?context=cpdaas?cm_sp=ibmdev--developer-sandbox--cloudreg) or [Create](https://dataplatform.cloud.ibm.com/registration/stepone?context=cpdaas&apps=all?cm_sp=ibmdev--developer-sandbox--cloudreg) one for free.
