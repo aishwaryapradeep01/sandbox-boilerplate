@@ -22,7 +22,7 @@
     </div>
     <div class="section" style="font-size:16px; margin-top:-1.25rem">
         <p>Didact is an executable README. This is a sample Didact file with the designs aligned to sandbox constructs. Each CTA in the timeline in the "Instructions" section get enabled accordingly when the user interacts with previous CTA</p>
-        <p>Run through this didact which is setup for the sandbox sample app. Note that the didact file must contian the "didact.md" extension to work. The progressive elements are enabled by files in the didact-config file (these files should be untouched). </p>
+        <p>Run through this didact which is setup for the sandbox sample app. Note that the didact file must contian the "didact.md" extension to work. The progressive elements are enabled by files in the didact-config folder (these files should be untouched). </p>
         <p> You can recreate the didact for your application by replacing the commands for the below CTA with encoded commands. You can use <a href="https://www.urlencoder.org/">this tool</a> to encode your commands. You can also change the introduction image beside the asset title. The marketplace CTAs in the footer can lead your users to further information about your product/services </p>
     </div>
     <div class="section">
